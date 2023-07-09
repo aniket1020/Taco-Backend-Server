@@ -1,0 +1,41 @@
+﻿
+
+Google Drive Additional Terms of Service
+
+Effective Date: March 31, 2020 (view previous version)
+
+To use Google Drive, you must accept (1) the Google Terms of Service, and (2) these Google Drive Additional Terms of Service (the “Google Drive Additional Terms”).
+
+Please read each of these documents carefully. Together, these documents are known as the “Terms”. They establish what you can expect from us as you use our services, and what we expect from you.
+
+Although it’s not a part of these Terms, we encourage you to read our Privacy Policy to better understand how you can update, manage, export, and delete your information.
+
+1\. Your Content
+
+Google Drive allows you to upload, submit, store, send and receive content. As described in the Google Terms of Service, your content remains yours. We do not claim ownership in any of your content, including any text, data, information, and files that you upload, share, or store in your Drive account. The Google Terms of Service give Google a limited purpose license to operate and improve the Google Drive services — so if you decide to share a document with someone, or want to open it on a different device, we can provide that functionality.
+
+Google Drive also allows you to collaborate on the content of other Google Drive users. The “owner” of the content is the one who controls the content and its use.
+
+Sharing settings in Google Drive allow you to control what others can do with your content in Google Drive. The privacy settings of your files depends on the folder or drive they are in. Files in your individual drive are private, until you decide to share them. You can share your content and can transfer control of your content to other users. Files you create or place in folders or drives shared by others will inherit the sharing settings and may inherit the ownership settings of the folder or drive they are in. We will not share your files and data with others except as described in our Privacy Policy.
+
+We will not use your content for marketing or promotional campaigns.
+
+2\. Program Policies
+
+We may review content to determine whether it is illegal or violates our Program Policies, and we may remove or refuse to display content that we reasonably believe violates our policies or the law. But that does not necessarily mean that we review content, so please don’t assume that we do
+## <a name="_b0zmdmflh3a9"></a>How do the Terms of Service affect me?
+As our [Terms of Service](https://www.google.com/drive/terms-of-service/) state, "You retain ownership of any intellectual property rights that you hold in that content. In short, what belongs to you stays yours."
+
+We do not claim ownership in any of your content, including any text, data, information, and files that you upload, share, or store in your Drive account. What our Terms of Service do is enable us to give you the services you want — so if you decide to share a document with someone, or want to open it on a different device, we can provide that functionality.
+
+You control who can access your files in Drive. We will not share your files and data with others except as described in our [Privacy Policy](https://www.google.com/policies/privacy/).
+
+We will not change a Private document into a Public one.
+
+We will not use a Private document for marketing or promotional campaigns.
+
+We will keep your data only as long as you ask us to keep it.
+
+You can [take your data with you](https://takeout.google.com/settings/takeout) if you choose to stop using Google Drive.
+
+**Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/**

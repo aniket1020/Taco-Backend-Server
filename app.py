@@ -1,6 +1,6 @@
-import ResponseTemplates
-
-from flask import Flask
+from Utility import ResponseTemplates
+from flask import Flask, request
+from TacoLLM import RequestHandler, ContextInitializer
 
 app = Flask(__name__)
 
@@ -17,8 +17,11 @@ def taco_help():
 
 @app.route("/taco-request", methods=['POST'])
 def taco_request():
-    return "<p>Hello World</p>"
+    inputQuery = request.form.get("message")
+    return RequestHandler.handleRequest(inputQuery)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Initialize chromadb collection
+    # ContextInitializer.initializeContext()
+    app.run()

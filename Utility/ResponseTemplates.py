@@ -35,4 +35,8 @@ def getLandingPage():
 def getHelp():
     return """
     <p>Help page</p>
+    Available API endpoints:<br>
+    <ul>
+        <li>/taco-request : To send requests for LLM (POST request containing key 'message')</li>
+    </ul>
     """
