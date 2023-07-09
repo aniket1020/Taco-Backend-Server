@@ -1,8 +1,13 @@
+import os
+
+from dotenv import load_dotenv
 from Utility import ResponseTemplates
 from flask import Flask, request
 from TacoLLM import RequestHandler, ContextInitializer
+from Utility.AthenticationToken import require_token
 
 app = Flask(__name__)
+load_dotenv()
 
 
 @app.route("/")
@@ -16,6 +21,7 @@ def taco_help():
 
 
 @app.route("/taco-request", methods=['POST'])
+@require_token
 def taco_request():
     inputQuery = request.form.get("message")
     return RequestHandler.handleRequest(inputQuery)
