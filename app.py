@@ -3,11 +3,13 @@ import os
 from dotenv import load_dotenv
 from Utility import ResponseTemplates
 from flask import Flask, request
-from TacoLLM import RequestHandler, ContextInitializer
+from TacoLLM import RequestHandler
 from Utility.AthenticationToken import require_token
 
 app = Flask(__name__)
 load_dotenv()
+
+os.system("build_database.py")
 
 
 @app.route("/")
@@ -28,6 +30,4 @@ def taco_request():
 
 
 if __name__ == '__main__':
-    # Initialize chromadb collection
-    # ContextInitializer.initializeContext()
     app.run()
