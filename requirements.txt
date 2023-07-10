@@ -7,3 +7,4 @@ vertexai
 google-cloud-aiplatform>=1.26.0
 python-dotenv~=1.0.0
 Flask-Cors==4.0.0
+Flask-SSLify==0.1.5
