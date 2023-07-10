@@ -1,26 +1,24 @@
 import os
-from langchain.llms import VertexAI
-from langchain import LLMChain
 from langchain import PromptTemplate
 from langchain.output_parsers import ResponseSchema
 from langchain.output_parsers import StructuredOutputParser
 from langchain.llms import VertexAI
 
 import chromadb
-from langchain.chat_models import ChatGooglePalm, ChatVertexAI
+from langchain.chat_models import ChatVertexAI
 from collections import defaultdict
 from chromadb.config import Settings
-from constants import credentials_json
+from TacoLLM.constants import credentials_json
 from langchain.chains import ConversationChain
 from langchain.memory import ConversationBufferMemory
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = credentials_json
 
 tandc_list = ""
-for comp in os.listdir("T&C_DatasetMD"):
+for comp in os.listdir("datasets"):
     tandc_list += comp
     tandc_list += ": "
-    for prod in os.listdir(f"T&C_DatasetMD\{comp}"):
+    for prod in os.listdir(f"datasets/{comp}"):
         prod_name = prod.split(".")[0]
         tandc_list += prod_name + ", "
     tandc_list = tandc_list[:-2]
@@ -95,8 +93,8 @@ chroma_restore_client = chromadb.Client(
         persist_directory="tandc-db"
     )
 )
-collection_name = "TandC-project"
 
+collection_name = "TandC-project"
 restore_collection = chroma_restore_client.get_collection(name=collection_name)
 
 

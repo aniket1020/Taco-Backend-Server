@@ -9,8 +9,6 @@ from Utility.AthenticationToken import require_token
 app = Flask(__name__)
 load_dotenv()
 
-os.system("build_database.py")
-
 
 @app.route("/")
 def main():

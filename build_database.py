@@ -4,7 +4,6 @@ from langchain.document_loaders import TextLoader
 from tqdm import tqdm
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import chromadb
-from collections import defaultdict
 from chromadb.config import Settings
 
 
@@ -58,6 +57,7 @@ chroma_client = chromadb.Client(
     ))
 
 collection_name = "TandC-project"
+
 # Vector database
 if len(chroma_client.list_collections()) > 0 and collection_name in [
     chroma_client.list_collections()[0].name
