@@ -148,20 +148,32 @@ def get_response_llm2(relevant_sentences, user_request):
         memory=memory,
         verbose=False
     )
+    # llm2_template = """
+    # You are a legal expert with a strong knowledge of companies terms and conditions. 
+
+    # Perform the following steps:
+
+    # Step 1: Check if the answer to the question {user_query} exists in the following relevant terms and conditions. \n
+    # {relevant_documents}\n\n. 
+
+
+    # Step 2: If the answer to the question {user_query} exists in the terms and conditions, return the answer. If there are links in the response, format them such that they are continous without gaps or new line characters.
+    # If the answer to the question {user_query} does not exist in the terms and conditions, respond with the following message:
+    # "Currently, I am  only trained on Terms and Conditions of certain companies. Therefore, I do not have an answer to your question.".
+
+    # Step 3: Re-check the response. Ensure that formatting of links is in one line.
+    # """
     llm2_template = """
-    You are a legal expert with a strong knowledge of companies terms and conditions. 
+    You are a legal expert with a strong knowledge of companies terms and conditions. Base your answer only on the following relevant documents: \n
+    {relevant_documents} \n\n
 
-    Perform the following steps:
+    Answer the user questions {user_query}\n
 
-    Step 1: Check if the answer to the question {user_query} exists in the following relevant terms and conditions. \n
-    {relevant_documents}\n\n. 
-
-
-    Step 2: If the answer to the question {user_query} exists in the terms and conditions, return the answer. If there are links in the response, format them such that they are continous without gaps or new line characters.
-    If the answer to the question {user_query} does not exist in the terms and conditions, respond with the following message:
-    "Currently, I am  only trained on Terms and Conditions of certain companies. Therefore, I do not have an answer to your question.".
-
-    Step 3: Re-check the response. Ensure that formatting of links is in one line.
+    DON'T make up any information, and answer only from the relevant documents.\n
+    
+    Re-check the response so that it is coherent with the user query.\n
+    
+    Ensure that the formatting of links is in one line.\n
     """
 
     llm2_prompt_template = PromptTemplate(
