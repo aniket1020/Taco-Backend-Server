@@ -3,10 +3,13 @@ import os
 from dotenv import load_dotenv
 from Utility import ResponseTemplates
 from flask import Flask, request
+from flask_cors import CORS
 from TacoLLM import RequestHandler
 from Utility.AthenticationToken import require_token
 
 app = Flask(__name__)
+CORS(app)
+
 load_dotenv()
 
 
