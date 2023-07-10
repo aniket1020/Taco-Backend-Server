@@ -25,11 +25,11 @@ def handleRequest(inputQuery):
                            'Twitter',
                            'Uber']
     if len(llm1_response['Product_Names']) == 0:
-        return f"The product is based on Question-Answering agent on top of Terms and Conditions of companies. Please " \
+        return f"The product is based on a Question-Answering agent on top of the Terms and Conditions of companies. Please " \
                f"ask a relevant question."
     for product_name in llm1_response['Product_Names']:
         if product_name not in valid_product_names:
-            return f"Currently, we are supporting {','.join(valid_product_names)}, please ask questions about the " \
+            return f"Currently, we are supporting {', '.join(valid_product_names)}, please ask questions about the " \
                    f"products mentioned here."
     relevant_sentences = get_relevant_sentences(llm1_response, inputQuery)
 
